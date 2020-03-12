@@ -1,0 +1,73 @@
+.roles-card {
+	position: relative;
+	width: 21.875vw;
+	min-width: 270px;
+	max-width: 420px;
+	height: 45vh;
+	min-height: 300px;
+	max-height: 500px;
+	cursor: pointer;
+	background-color: $secondary;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: bottom;
+	background-size: contain;
+	// &:nth-child(2n) {
+	// 	background-color: $grey;
+	// }
+	// &[data-num='1'] {
+	//   background-color: $grey;
+	// }
+	// }
+	// @include respond-to(lg){
+	// }
+	&:hover {
+		.roles-card__hover {
+			opacity: 1;
+		}
+	}
+	&__hover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 20px;
+		transition: 0.35s;
+		opacity: 0;
+		background-color: rgba($primary, 0.85);
+	}
+	&__icon-block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 57px;
+		height: 57px;
+		margin-left: auto;
+		border-radius: 100%;
+		background-color: #fff;
+	}
+	&__icon {
+		width: 20px;
+		height: 20px;
+		transform: rotate(-45deg);
+
+		fill: $black;
+	}
+	&__info-block {
+		padding-bottom: 30px;
+		text-align: center;
+		color: #fff;
+	}
+	&__name {
+		font-size: 30px;
+		margin-bottom: 18px;
+	}
+	&__role {
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+}

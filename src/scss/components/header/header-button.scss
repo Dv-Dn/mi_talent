@@ -1,0 +1,63 @@
+.header-button {
+	display: flex;
+	width: 150px;
+	height: 55px;
+	outline: 0;
+	z-index: 5;
+	cursor: pointer;
+	@include respond-to(md) {
+		width: 250px;
+		height: 60px;
+	}
+	@include respond-to(lg) {
+		height: 75px;
+		width: 370px;
+	}
+	@include respond-to(xl) {
+		height: 110px;
+	}
+	&__left {
+		display: flex;
+		width: 100%;
+		font-size: 14px;
+		font-weight: 800;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: $primary;
+		letter-spacing: 0.14em;
+		@include respond-to(md) {
+			width: 70%;
+		}
+	}
+	&__right {
+		display: none;
+		align-items: center;
+		flex: 1;
+		justify-content: center;
+		transition: 0.6s;
+		background-color: #fff;
+		@include respond-to(md) {
+			display: flex;
+		}
+	}
+	&__icon {
+		transition: 0.3s;
+	}
+	&:active {
+		transform: scale(0.98);
+	}
+	&:hover &__icon {
+		fill: #fff;
+	}
+	&:hover &__left {
+		color: $black;
+		background-color: $secondary;
+	}
+	&:hover &__right {
+		color: $black;
+		background-color: $primary;
+	}
+}

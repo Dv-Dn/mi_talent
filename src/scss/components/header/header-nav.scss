@@ -1,0 +1,48 @@
+.header-nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	top: 67px;
+
+}
+.header-logo {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: -30px;
+	display: flex;
+	justify-content: center;
+	z-index: -2;
+	@include respond-to(lg) {
+		top: 0;
+	}
+	&__img {
+		width: 150px;
+	}
+}
+.nav {
+	display: flex;
+	align-items: center;
+	color: red;
+	&__ul {
+		display: none;
+		margin-left: 47px;
+		text-transform: uppercase;
+		flex-direction: row;
+		@include respond-to(md) {
+			display: flex;
+		}
+	}
+	&__li {
+		margin-right: 50px;
+		letter-spacing: 3px;
+		a {
+			font-size: 14px;
+			color: $black;
+			text-decoration: none;
+			font-weight: 800;
+		}
+	}
+}

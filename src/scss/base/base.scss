@@ -1,0 +1,32 @@
+body {
+	font-family: "Nunito", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Poppins", sans-serif;
+}
+#app {
+	max-width: 2560px;
+	margin: 0 auto;
+}
+h1 {
+	font-size: 35px;
+	// @include respond-to(md) {
+	// 	font-size: 45px;
+	// }
+	@include respond-to(lg) {
+		font-size: 75px;
+	}
+	@include respond-to(xl) {
+		font-size: 100px;
+	}
+}
+svg {
+	cursor: pointer;
+	&:hover {
+		fill: $primary;
+	}
+}
